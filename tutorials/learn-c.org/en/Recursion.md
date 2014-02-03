@@ -39,7 +39,7 @@ For example, this function will perform multiplication by recursively adding :
 Exercise
 --------
  
-Define a new function that will computer the factorial function (5! = 5x4x3x2x1).
+Define a new function called `factorial()` that will compute the factorial by recursive multiplication (5! = 5x4x3x2x1).
  
 Tutorial Code
 -------------
@@ -48,10 +48,12 @@ Tutorial Code
 
 int main() {
   /* testing code */
-  printf("1! = %i", factorial(1));
-  printf("3! = %i", factorial(3));
-  printf("5! = %i", factorial(5));
+  printf("1! = %i\n", factorial(1));
+  printf("3! = %i\n", factorial(3));
+  printf("5! = %i\n", factorial(5));
 }
+
+/* write your function here (don't forget the declaration) */
 
 Expected Output
 ---------------
