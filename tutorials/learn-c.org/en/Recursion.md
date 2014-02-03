@@ -10,10 +10,10 @@ Common examples of where recursion is used :
  
 Recursion always consists of two main parts. A terminating case that indicates when the recursion will finish and a call to itself that must make progress towards the terminating case.
  
-For example, this function will perform multiplication by recursively adding :
+For example, this function will perform multiplication by recursively adding:
 
     #include <stdio.h>
-
+    
     unsigned int multiply(unsigned int x, unsigned int y)
     {
         if (x == 1)
@@ -26,11 +26,10 @@ For example, this function will perform multiplication by recursively adding :
             /* Recursive step */
             return y + multiply(x-1, y);
         }
- 
         /* Catch scenario when x is zero */
         return 0;
     }
-
+    
     int main() {
         printf("3 times 5 is %d", multiply(3, 5));
         return 0;
@@ -44,43 +43,43 @@ Define a new function called `factorial()` that will compute the factorial by re
 Tutorial Code
 -------------
 
-#include <stdio.h>
-
-int main() {
-  /* testing code */
-  printf("1! = %i\n", factorial(1));
-  printf("3! = %i\n", factorial(3));
-  printf("5! = %i\n", factorial(5));
-}
-
-/* write your function here (don't forget the declaration) */
+    #include <stdio.h>
+    
+    int main() {
+        /* testing code */
+        printf("1! = %i\n", factorial(1));
+        printf("3! = %i\n", factorial(3));
+        printf("5! = %i\n", factorial(5));
+    }
+    
+    /* write your function here (don't forget the declaration) */
 
 Expected Output
 ---------------
 
-1! = 1
-3! = 6
-5! = 120
+    1! = 1
+    3! = 6
+    5! = 120
 
 Solution
 --------
 
-#include <stdio.h>
-
-int factorial(int number);
-
-int main() {
-  /* testing code */
-  printf("1! = %i\n", factorial(1));
-  printf("3! = %i\n", factorial(3));
-  printf("5! = %i\n", factorial(5));
-}
-
-int factorial(int number){
-    int f = number;
+    #include <stdio.h>
     
-    if(number > 1){
-        f *= factorial(number-1);
-    }
-    return f;
-}
+    int factorial(int number);
+
+    int main() {
+        /* testing code */
+        printf("1! = %i\n", factorial(1));
+        printf("3! = %i\n", factorial(3));
+        printf("5! = %i\n", factorial(5));
+     }
+     
+    int factorial(int number){
+         int f = number;
+         
+         if(number > 1){
+             f *= factorial(number-1);
+         }
+         return f;
+     }
